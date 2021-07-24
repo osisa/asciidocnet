@@ -1,0 +1,20 @@
+dependencies {
+  compileOnly project(':asciidoctorj')
+  api project(':asciidoctorj-test-support')
+  api "org.jboss.arquillian.container:arquillian-container-spi:$arquillianVersion"
+  api "org.jboss.arquillian.container:arquillian-container-test-spi:$arquillianVersion"
+  api "org.jboss.arquillian.container:arquillian-container-impl-base:$arquillianVersion"
+  api "org.jboss.arquillian.container:arquillian-container-test-impl-base:$arquillianVersion"
+}
+
+def javaApiUrl = "https://docs.oracle.com/javase/8/docs/api/"
+def junitURL = "https://junit.org/junit4/javadoc/latest"
+
+javadoc {
+  options.links( javaApiUrl, junitURL )
+}
+
+project.ext.publicationName = "mavenAsciidoctorJArquillianExtension"
+
+apply from: rootProject.file('gradle/publish.gradle')
+apply from: rootProject.file('gradle/signing.gradle')

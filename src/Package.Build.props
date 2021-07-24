@@ -1,0 +1,34 @@
+<Project>
+
+  <PropertyGroup>
+    <PackageVersion>$(GitVersion_NuGetVersionV2)</PackageVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>osisa.png</PackageIcon>
+    <RepositoryUrl>https://github.com/osisa/netbase</RepositoryUrl>
+    <PackageReleaseNotes>Test</PackageReleaseNotes>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\osisa.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <IsPackageProject>true</IsPackageProject>
+  </PropertyGroup>
+
+  <Target Name="PackageRemove">
+    <Message Text='Package Remove of $(ProjectDir) is "$(OutDir)..\$(TargetName).$(PackageVersion).nupkg" - $(SolutionPackageVersion)' />
+    <Exec Command='GPR delete osisa/NETBase/$(TargetName)/$(PackageVersion) --force' />
+  </Target>
+
+  <Target Name="PackageAdd">
+    <Message Text='Package Add of $(ProjectDir) is "$(OutDir)..\$(TargetName).$(PackageVersion).nupkg" $(Project). - $(SolutionPackageVersion)' />
+    <Exec Command='GPR push $(OutDir)..\$(TargetName).$(PackageVersion).nupkg' />
+    <!--<Exec Command='GPR details osisa $(TargetName) $(PackageVersion)' />-->
+  
+  </Target>
+</Project>

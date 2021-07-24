@@ -1,0 +1,17 @@
+apply plugin: 'java'
+
+dependencies {
+    api "junit:junit:${junitVersion}"
+}
+
+def javaApiUrl = "https://docs.oracle.com/javase/8/docs/api/"
+def junitURL = "https://junit.org/junit4/javadoc/latest"
+
+javadoc {
+    options.links(javaApiUrl, junitURL)
+}
+
+ext.publicationName = "mavenAsciidoctorJTestSupport"
+
+apply from: rootProject.file('gradle/publish.gradle')
+apply from: rootProject.file('gradle/signing.gradle')

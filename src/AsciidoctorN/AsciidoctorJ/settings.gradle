@@ -1,0 +1,15 @@
+rootProject.name = 'asciidoctorj'
+
+include \
+  'asciidoctorj',
+  'asciidoctorj-arquillian-extension',
+  'asciidoctorj-api',
+  'asciidoctorj-distribution',
+  'asciidoctorj-documentation',
+  'asciidoctorj-wildfly-integration-test',
+  'asciidoctorj-springboot-integration-test',
+  'asciidoctorj-springboot-integration-test:springboot-app',
+  'asciidoctorj-test-support'
+
+project(':asciidoctorj').projectDir = file('asciidoctorj-core')
+

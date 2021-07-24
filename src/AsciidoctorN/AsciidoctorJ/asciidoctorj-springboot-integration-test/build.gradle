@@ -1,0 +1,13 @@
+jar.enabled = false
+
+dependencies {
+    testCompileOnly project(':asciidoctorj')
+    testImplementation "junit:junit:$junitVersion"
+    testImplementation "org.assertj:assertj-core:$assertjVersion"
+    testImplementation "commons-io:commons-io:$commonsioVersion"
+    testImplementation "org.awaitility:awaitility:4.0.3"
+    testImplementation "com.squareup.okhttp3:okhttp:4.9.1"
+    testImplementation "com.google.code.gson:gson:2.8.6"
+}
+
+test.dependsOn(':asciidoctorj-springboot-integration-test:springboot-app:assemble')

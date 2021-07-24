@@ -1,25 +1,37 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26114.2
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31507.150
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{2674A673-0E94-465E-A981-85ABB1CA78E7}"
 	ProjectSection(SolutionItems) = preProject
 		..\paket.dependencies = ..\paket.dependencies
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsciiDocNet", "AsciiDocNet\AsciiDocNet.csproj", "{0C808E3D-5ECF-46A9-936D-BCD019B858F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsciiDocNet", "AsciiDocNet\AsciiDocNet.csproj", "{0C808E3D-5ECF-46A9-936D-BCD019B858F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsciiDocNet.Tests", "AsciiDocNet.Tests\AsciiDocNet.Tests.csproj", "{8AFB2E20-2EBE-48D2-AA28-89F7F7948429}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsciiDocNet.Tests", "AsciiDocNet.Tests\AsciiDocNet.Tests.csproj", "{8AFB2E20-2EBE-48D2-AA28-89F7F7948429}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{5B868227-DC86-44DA-AFDE-752EB8B7CE0C}"
 	ProjectSection(SolutionItems) = preProject
 		..\build\AsciiDocNet.nuspec = ..\build\AsciiDocNet.nuspec
 	EndProjectSection
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "scripts", "..\build\scripts\scripts.fsproj", "{876DEC6A-20DB-4522-AB92-0C5895CC791C}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "scripts", "..\build\scripts\scripts.fsproj", "{876DEC6A-20DB-4522-AB92-0C5895CC791C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsciiDocNet.Benchmarks", "AsciiDocNet.Benchmarks\AsciiDocNet.Benchmarks.csproj", "{B61A01EE-6A7E-4BDB-A7AE-807E4FC6B859}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsciiDocNet.Benchmarks", "AsciiDocNet.Benchmarks\AsciiDocNet.Benchmarks.csproj", "{B61A01EE-6A7E-4BDB-A7AE-807E4FC6B859}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{92CF621C-3FFB-4824-A168-4BA3F6F0BA40}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		outputpath.props = outputpath.props
+		Package.Build.props = Package.Build.props
+		SolutionInfo.cs = SolutionInfo.cs
+		SolutionInfo.vb = SolutionInfo.vb
+		Test.Build.props = Test.Build.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsciidoctorN", "AsciidoctorN\AsciidoctorN.csproj", "{A6627FC8-9325-4B51-B2C9-A94F8077FA46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,18 +48,25 @@ Global
 		{8AFB2E20-2EBE-48D2-AA28-89F7F7948429}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AFB2E20-2EBE-48D2-AA28-89F7F7948429}.Release|Any CPU.Build.0 = Release|Any CPU
 		{876DEC6A-20DB-4522-AB92-0C5895CC791C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{876DEC6A-20DB-4522-AB92-0C5895CC791C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{876DEC6A-20DB-4522-AB92-0C5895CC791C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{876DEC6A-20DB-4522-AB92-0C5895CC791C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{876DEC6A-20DB-4522-AB92-0C5895CC791C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B61A01EE-6A7E-4BDB-A7AE-807E4FC6B859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B61A01EE-6A7E-4BDB-A7AE-807E4FC6B859}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B61A01EE-6A7E-4BDB-A7AE-807E4FC6B859}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B61A01EE-6A7E-4BDB-A7AE-807E4FC6B859}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6627FC8-9325-4B51-B2C9-A94F8077FA46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6627FC8-9325-4B51-B2C9-A94F8077FA46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6627FC8-9325-4B51-B2C9-A94F8077FA46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6627FC8-9325-4B51-B2C9-A94F8077FA46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{876DEC6A-20DB-4522-AB92-0C5895CC791C} = {5B868227-DC86-44DA-AFDE-752EB8B7CE0C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {824B395F-C5A5-4DE4-92AE-01136306359F}
 	EndGlobalSection
 EndGlobal

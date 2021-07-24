@@ -1,0 +1,79 @@
+
+<!-- https://docs.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-properties?view=vs-2017 -->
+<!-- https://docs.microsoft.com/de-de/visualstudio/msbuild/msbuild-conditions?view=vs-2015&redirectedfrom=MSDN -->
+<Project>
+ 
+  <PropertyGroup>
+    <SolutionOutputPath>$(SolutionDir)..\bin</SolutionOutputPath>
+    <SolutionOutputPath>$(MSBuildThisFileDirectory)bin</SolutionOutputPath>
+    <SolutionPackageVersion>0.1.0-alpha.3953</SolutionPackageVersion>
+    <MicrosoftNETTestSdkVersion>16.8.0-preview-20200806-02</MicrosoftNETTestSdkVersion>
+    <MSTestTestAdapterVersion>2.1.2</MSTestTestAdapterVersion>
+    <MSTestTestFrameworkVersion>2.1.2</MSTestTestFrameworkVersion>
+    <ExecutableFramework>net5.0</ExecutableFramework>
+    <LibraryFramework>netstandard2.0</LibraryFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+
+    <PackageReference Include="GitVersionTask" Version="5.3.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(MSBuildProjectExtension)'=='.csproj' And '$(SkipSolutionInfo)'==''">
+    <Compile Include="$(MSBuildThisFileDirectory)\SolutionInfo.cs" Link="Properties\SolutionInfo.cs" />
+    <!--<Compile Include="$(MSBuildThisFileDirectory)\CustomDictionary.xml" Link="CustomDictionary.xml" />-->
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(MSBuildProjectExtension)'=='.vbproj' And '$(SkipSolutionInfo)'==''">
+    <Compile Include="$(MSBuildThisFileDirectory)\SolutionInfo.vb" Link="Properties\SolutionInfo.vb" />
+    <!--<Compile Include="$(MSBuildThisFileDirectory)\CustomDictionary.xml" Link="CustomDictionary.xml" />-->
+  </ItemGroup>
+
+
+  <PropertyGroup>
+    <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
+    <!--<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>-->
+
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SignAssembly>false</SignAssembly>
+    <!--<AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)osisaNoPwd.snk</AssemblyOriginatorKeyFile>-->
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+     <!--<OutputPath>$(SolutionOutputPath)</OutputPath>-->
+     <!--<RuntimeIdentifier>win7-x64</RuntimeIdentifier>-->
+    <NoWarn>NU1701;NU5125;CS8002;CS3001;CS3002;CS3003;CS3024;CS0649;CS3009;CS0067;CS3027</NoWarn>
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+
+  <!-- <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup> -->
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net472'">
+    <DefineConstants>NETFULL</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
+    <DefineConstants>NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.1'">
+    <DefineConstants>NETCORE2_1</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.0'">
+    <DefineConstants>NETCORE3_0</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1'">
+    <DefineConstants>NETCORE3_1</DefineConstants>
+  </PropertyGroup>
+
+  <Target Name="Info">
+    <Message Text='TargetFramework=$(MSBuildProject) is "$(TargetFramework)" $(DefineConstants).  - $(SolutionPackageVersion)' />
+  </Target>
+</Project>

@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Version>2.0.2</Version>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="JavaToCSharpIcon.ico" />
+    <None Remove="JavaToCSharpIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="JavaToCSharpIcon.ico" />
+    <Resource Include="JavaToCSharpIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Caliburn.Micro" Version="4.0.173" />
+    <PackageReference Include="MahApps.Metro" Version="2.4.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JavaToCSharp\JavaToCSharp.csproj" />
+  </ItemGroup>
+</Project>

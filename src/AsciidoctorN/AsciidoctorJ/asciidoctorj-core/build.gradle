@@ -1,0 +1,128 @@
+apply plugin: 'java-library'
+apply plugin: 'groovy'
+apply plugin: 'biz.aQute.bnd.builder'
+
+project.ext.publicationName = "mavenAsciidoctorJ"
+
+apply from: rootProject.file('gradle/publish.gradle')
+apply from: rootProject.file('gradle/signing.gradle')
+
+dependencies {
+  api project(path: ':asciidoctorj-api')
+  api "org.jruby:jruby:$jrubyVersion"
+  implementation "com.beust:jcommander:$jcommanderVersion"
+  gems "rubygems:asciidoctor:$asciidoctorGemVersion"
+  gems "rubygems:coderay:$coderayGemVersion"
+  gems "rubygems:rouge:$rougeGemVersion"
+  gems "rubygems:erubis:$erubisGemVersion"
+  gems "rubygems:haml:$hamlGemVersion"
+  gems "rubygems:open-uri-cached:$openUriCachedGemVersion"
+  gems "rubygems:slim:$slimGemVersion"
+  gems "rubygems:thread_safe:$threadSafeGemVersion"
+  gems "rubygems:tilt:$tiltGemVersion"
+  gems "rubygems:concurrent-ruby:$concurrentRubyGemVersion"
+  // TODO could use dependency replacement feature to fix version of Saxon-HE
+  testImplementation("org.xmlmatchers:xml-matchers:$xmlMatchersVersion") { exclude module: 'Saxon-HE' }
+  testImplementation "net.sf.saxon:Saxon-HE:$saxonVersion"
+  testImplementation "com.google.guava:guava:$guavaVersion"
+  testImplementation "org.jsoup:jsoup:$jsoupVersion"
+  testImplementation "io.netty:netty-all:$nettyVersion"
+  testImplementation project(path: ':asciidoctorj-arquillian-extension')
+  compileOnly "org.osgi:osgi.annotation:$osgiVersion"
+}
+
+def gemFiles = fileTree("${project.buildDir}/.gems") {
+  include 'specifications/*.gemspec'
+  include 'gems/*/lib/**'
+  include "gems/asciidoctor-*/data/**"
+}
+
+jrubyPrepare {
+  doLast {
+    copy { // bundles the gems inside this artifact
+      from gemFiles
+      into preparedGems
+    }
+  }
+}
+
+javadoc {
+  classpath = sourceSets.main.output + sourceSets.main.compileClasspath + project(':asciidoctorj-test-support').sourceSets.test.output
+
+  source(project(':asciidoctorj-api').sourceSets.main.allJava)
+}
+
+//jruby {
+//	execVersion = '1.7.20'
+//}
+
+jar {
+  bnd(
+    ('Bundle-Name'): 'asciidoctorj',
+    ('Bundle-SymbolicName'): 'org.asciidoctor.asciidoctorj',
+    ('Import-Package'): 'com.beust.jcommander;resolution:=optional, *'
+  )
+  metaInf { from "$buildDir/version-info/" }
+}
+
+test {
+  useJUnit {
+    excludeCategories 'org.asciidoctor.categories.Polluted'
+  }
+}
+
+task createVersionFile {
+  inputs.property('version.asciidoctor', asciidoctorGemVersion)
+  inputs.property('version.asciidoctorj', project.version)
+  outputs.dir("$buildDir/version-info")
+
+  doLast {
+    file("$buildDir/version-info/asciidoctorj-version.properties").text = """
+version.asciidoctorj: ${project.version}
+version.asciidoctor: $asciidoctorGemVersion
+"""
+  }
+}
+jar.dependsOn createVersionFile
+
+task pollutedTest(type: Test) {
+  useJUnit {
+    includeCategories 'org.asciidoctor.categories.Polluted'
+  }
+  forkEvery = 10
+  minHeapSize = '128m'
+  maxHeapSize = '1024m'
+  if (JavaVersion.current().isJava8Compatible()) {
+    jvmArgs '-XX:-UseGCOverheadLimit'
+  }
+  else {
+    jvmArgs '-XX:MaxPermSize=256m', '-XX:-UseGCOverheadLimit'
+  }
+
+  environment 'GEM_PATH', '/some/path'
+  environment 'GEM_HOME', '/some/other/path'
+
+  testLogging {
+    // events 'passed', 'failed', 'skipped', 'standard_out', 'standard_error'
+    // events 'standard_out', 'standard_error'
+    afterSuite { desc, result ->
+      if (!desc.parent && logger.infoEnabled) {
+        logger.info "Test results: ${result.resultType} (${result.testCount} tests, ${result.successfulTestCount} passed, ${result.failedTestCount} failed, ${result.skippedTestCount} skipped)"
+      }
+    }
+  }
+
+  reports {
+    html {
+      destination file("$buildDir/reports/pollutedTest")
+    }
+    junitXml {
+      destination file("$buildDir/pollutedTest-result")
+    }
+  }
+}
+
+test.dependsOn pollutedTest
+
+
+
