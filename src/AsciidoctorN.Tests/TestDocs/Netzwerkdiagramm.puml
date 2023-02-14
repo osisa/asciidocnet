@@ -1,0 +1,56 @@
+```plantuml
+@startuml
+
+  'use only straight lines
+  skinparam linetype ortho
+  
+  title Netzwerkdiagram bei Staudt AG und staudtcarrera AG
+  cloud Swisscom
+  cloud UPC
+
+  'group per location
+  node "Altes Büro" {
+    (Router)
+    (Firewall Zyxell) as Firewall
+    (Switch) as sw1
+    (PC 1 staudtcarrera) as pc1sc
+    note bottom : PC und Telefon können separat am Switch hängen,\noder der PC kann am Telefon hängen\nbeides funktioniert und das Staudt-Netzt ist bei Variante 2\ngleich erreichbar wie bei Variante 1.
+    (Telefon 1 staudtcarrera) as t1sc
+    (PC 2 staudtcarrera) as pc2sc
+    (Telefon 2 staudtcarrera) as t2sc
+  }
+
+  node "Neues Büro" {
+    (Switch) as sw2
+    (Telefonanlage)
+    note right : Die Telefonanlage ist unanbhängig von unserer Firewall\nund neu auch unabhängig vom Swisscom Internet
+    (PC 1 Staudt) as pc1s
+    (Telefon 1 Staudt) as t1s
+    (PC 2 Staudt) as pc2s
+    (Telefon 2 Staudt) as t2s
+  }
+
+  'connections inside locations
+  sw1-->pc1sc
+  sw1-->t1sc
+  sw1-->t2sc
+  t2sc-->pc2sc
+
+  sw2-->pc1s
+  sw2-->t1s
+  sw2-->t2s
+  t2s-->pc2s
+
+  'connect the two locations
+  sw1<-->sw2
+
+  'connect to the internet
+  Swisscom-->Router
+  Router-->Firewall
+  Firewall-->sw1
+  UPC-->Telefonanlage
+  Telefonanlage-->sw2
+
+  'arrangement
+  Swisscom ----[hidden]right----> UPC
+@enduml

@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-	  <TargetFrameworks>$(ExecutableFramework)</TargetFrameworks>
+	  <TargetFrameworks>net7.0</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="BenchmarkDotNet" Version="0.11.5" />
+    <PackageReference Include="BenchmarkDotNet" />
     <ProjectReference Include="..\AsciiDocNet\AsciiDocNet.csproj" />
   </ItemGroup>
-  <Import Project="..\outputpath.props" />
+  <!--<Import Project="..\outputpath.props" />-->
 </Project>

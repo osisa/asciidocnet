@@ -2,7 +2,7 @@
 
   <PropertyGroup>
 	<OutputType>Exe</OutputType>
-	<TargetFramework>net5.0</TargetFramework>
+	<TargetFramework>net7.0</TargetFramework>
 
 	<PackAsTool>true</PackAsTool>
 	<ToolCommandName>botsay</ToolCommandName>
@@ -10,9 +10,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Java2C\_ReSharper.Caches\**" />
-    <EmbeddedResource Remove="Java2C\_ReSharper.Caches\**" />
-    <None Remove="Java2C\_ReSharper.Caches\**" />
+    <Compile Remove="Java2C\**" />
+    <EmbeddedResource Remove="Java2C\**" />
+    <None Remove="Java2C\**" />
   </ItemGroup>
 
   <ItemGroup>

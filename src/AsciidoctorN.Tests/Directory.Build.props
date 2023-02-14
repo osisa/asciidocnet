@@ -15,7 +15,7 @@
     <EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
 
     <LangVersion>11</LangVersion>
-    <NETCoreVersion>net7.0</NETCoreVersion>
+    <NETCoreVersion>net7.0-windows</NETCoreVersion>
     <LibraryFramework>netstandard2.0</LibraryFramework>
     <DefaultNetTargetFramework>net7.0</DefaultNetTargetFramework>
     <DefaultNetTargetFrameworkVersion>v6.0</DefaultNetTargetFrameworkVersion>

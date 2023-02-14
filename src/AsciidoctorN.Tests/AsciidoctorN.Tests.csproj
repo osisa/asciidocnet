@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+	<Import Project="..\Test.Build.props" />
+
+	<ItemGroup>
+	  <None Remove="TestDocs\basic-example.adoc" />
+	  <None Remove="TestDocs\Dokumentation Staudt AG.adoc" />
+	  <None Remove="TestDocs\example.adoc" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="TestDocs\basic-example.adoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="TestDocs\Dokumentation Staudt AG.adoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="TestDocs\example.adoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\AsciiDocNet\AsciiDocNet.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="osisa.IO.TestInfrastructure" />
+	  <PackageReference Include="osisa.TestInfrastructure" />
+	</ItemGroup>
+</Project>

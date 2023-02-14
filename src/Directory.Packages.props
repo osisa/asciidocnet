@@ -1,0 +1,271 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <LangVersion>11</LangVersion>
+    <NETCoreVersion>net6.0-windows</NETCoreVersion>
+    <LibraryFramework>netstandard2.0</LibraryFramework>
+    <DefaultNetTargetFramework>net60</DefaultNetTargetFramework>
+    <DefaultNetTargetFrameworkVersion>v6.0</DefaultNetTargetFrameworkVersion>
+    <EFCoreVersion>3.1.22</EFCoreVersion>
+    <EFCoreJetVersion>3.1.1</EFCoreJetVersion>
+    <MicrosoftNETTestSdkVersion>17.5.0-preview-20221003-04</MicrosoftNETTestSdkVersion>
+    <MSTestTestAdapterVersion>3.0.2</MSTestTestAdapterVersion>
+    <MSTestTestFrameworkVersion>3.0.2</MSTestTestFrameworkVersion>
+    <MoqVersion>4.18.2</MoqVersion>
+    <MicrosoftManagementInfrastructureVersion>2.0.0</MicrosoftManagementInfrastructureVersion>
+    <FluentAssertion>6.8.0</FluentAssertion>
+    <SystemConfigurationVersion>7.0.0</SystemConfigurationVersion>
+    <SystemVersion>0.2.0-alpha.5170</SystemVersion>
+    <FileProviderVersion>7.0.0</FileProviderVersion>
+    <JsonVersion>7.0.0</JsonVersion>
+    <ExtensionVersion>7.0.0</ExtensionVersion>
+    <EventVersion>0.83.4713</EventVersion>
+    <SystemComponentModelAnnotationsVersion>6.0.0-preview.4.21253.7</SystemComponentModelAnnotationsVersion>
+    <GraphVersion>5.0.0-rc.1</GraphVersion>
+    <GraphVersionCore>3.0.0-rc.1</GraphVersionCore>
+    <MSIdentityVersion>4.48.1</MSIdentityVersion>
+    <osisaTestVersion>0.2.0-ModelFeature.6962</osisaTestVersion>
+    <osisaBaseVersion>0.2.0-ModelFeature.7452</osisaBaseVersion>
+    <osisaRepositoryVersion>0.2.0-ModelFeature.7663</osisaRepositoryVersion>
+    <NewtonsoftVersion>13.0.2-beta3</NewtonsoftVersion>
+    <UserSecretsVersion>7.0.0</UserSecretsVersion>
+    <SystemManagementVersion>7.0.0</SystemManagementVersion>
+    <MicrosoftWin32RegistryVersion>6.0.0-preview.5.21301.5</MicrosoftWin32RegistryVersion>
+    <SystemDirectoryServicesVersion>6.0.0</SystemDirectoryServicesVersion>
+    <osisaNPOI>0.2.2-beta.0</osisaNPOI>
+    <CompileBasic>true</CompileBasic>
+    <RestorePackagesWithLockFile>false</RestorePackagesWithLockFile>
+    <GetVersion>true</GetVersion>
+  </PropertyGroup>
+  <ItemGroup>
+
+
+    <PackageVersion Include="JetBrains.dotCover.DotNetCliTool" Version="2022.3.0-eap07" />
+    <PackageVersion Include="dotnet-xunit" Version="2.4.0-beta.1.build3958" />
+    
+    <PackageVersion Include="CsQuery.NETStandard" Version="1.3.6.1" />
+    <PackageVersion Include="DiffPlex" Version="1.7.0" />
+    <!--<PackageVersion Include="Microsoft.NET.Test.Sdk" Version="16.11.0"    />-->
+    <PackageVersion Include="SpecFlow.xUnit" Version="3.9.22" />
+    <PackageVersion Include="xunit" Version="2.4.1" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="2.4.3" />
+    
+    <PackageVersion Include="Awesome.Net.WritableOptions" Version="3.0.0" />
+    <PackageVersion Include="Azure.AI.TextAnalytics" Version="5.2.0-beta.2" />
+    <PackageVersion Include="Azure.Core" Version="1.26.0" />
+    <PackageVersion Include="Azure.Identity" Version="1.9.0-beta.1" />
+    <PackageVersion Include="BenchmarkDotNet" Version="0.11.5" />
+    <PackageVersion Include="bunit" Version="1.9.8" />
+    <PackageVersion Include="CommandLineParser" Version="2.9.1" />
+    <PackageVersion Include="CommunityToolkit.Mvvm" Version="8.0.0-preview4" />
+    <PackageVersion Include="Dropbox.Api" Version="6.36.0" />
+    <PackageVersion Include="Elsa" Version="2.8.2" />
+    <PackageVersion Include="Elsa.Abstractions" Version="2.8.2" />
+    <PackageVersion Include="Elsa.Activities.Console" Version="2.8.2" />
+    <PackageVersion Include="Elsa.Activities.Http" Version="2.8.2" />
+    <PackageVersion Include="Elsa.Activities.Email" Version="2.8.2" />
+    <PackageVersion Include="Elsa.Activities.Temporal.Quartz" Version="2.8.2" />
+    <PackageVersion Include="Elsa.Core" Version="2.8.2" />
+    <PackageVersion Include="Elsa.Designer.Components.Web" Version="2.8.2" />
+    <PackageVersion Include="Elsa.Persistence.EntityFramework.Core" Version="2.8.2" />
+    <PackageVersion Include="Elsa.Persistence.EntityFramework.Sqlite" Version="2.8.2" />
+    <PackageVersion Include="Elsa.Server.Api" Version="2.8.2" />
+    <PackageVersion Include="EntityFrameworkCore.Jet" Version="$(EFCoreJetVersion)" />
+    <PackageVersion Include="EventFlow" Version="$(EventVersion)" />
+    <PackageVersion Include="EventFlow.DependencyInjection" Version="$(EventVersion)" />
+    
+    <!-- <PackageVersion Include="EventFlow.EntityFramework" Version="$(EventVersion)" /> -->
+    <PackageVersion Include="EventFlow.EntityFramework" Version="0.83.4713" />
+    <PackageVersion Include="EventFlow.MsSql" Version="$(EventVersion)" />
+    <PackageVersion Include="ExtendedXmlSerializer" Version="3.7.6" />
+    <PackageVersion Include="FluentAssertions" Version="$(FluentAssertion)" />
+    <PackageVersion Include="HtmlAgilityPack" Version="1.11.42" />
+    <PackageVersion Include="IgniteUI.Blazor" Version="22.1.41" />
+    <PackageVersion Include="IronOcr" Version="2022.3.0" />
+    <PackageVersion Include="IronOcr.Languages.German" Version="2020.11.2" />
+    <PackageVersion Include="JetBrains.DotMemoryUnit" Version="3.2.20220510" />
+    <PackageVersion Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.5" NoWarn="NU1605" />
+    <PackageVersion Include="Microsoft.AspNetCore.Authentication.Negotiate" Version="7.0.0-rc.1.22427.2" />
+    <PackageVersion Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.5" NoWarn="NU1605" />
+    <PackageVersion Include="Microsoft.AspNetCore.Blazor.HttpClient" Version="3.2.0-preview3.20168.3" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components" Version="5.0.0-preview.6.20312.15" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.0-preview.3.22178.4" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.0-preview.3.22178.4" PrivateAssets="all" />
+    <PackageVersion Include="Microsoft.AspNetCore.Mvc.Testing" Version="6.0.10" />
+    <PackageVersion Include="Microsoft.AspNetCore.OData" Version="8.0.11" />
+    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="7.0.0-rc.1.22427.2" />
+    <PackageVersion Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageVersion Include="Microsoft.Authentication.WebAssembly.Msal" Version="7.0.0-preview.3.22178.4" />
+    <PackageVersion Include="Microsoft.Bcl.AsyncInterfaces" Version="7.0.0" />
+    <PackageVersion Include="Microsoft.Identity.Web" Version="1.16.0" />
+    <PackageVersion Include="Microsoft.Identity.Web.UI" Version="1.16.0" />
+    <PackageVersion Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+    <PackageVersion Include="Microsoft.Identity.Client" Version="$(MSIdentityVersion)" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="$(EFCoreVersion)" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Relational" Version="$(EFCoreVersion)" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="$(EFCoreVersion)" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.InMemory" Version="$(EFCoreVersion)" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Abstractions" Version="$(EFCoreVersion)" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="$(EFCoreVersion)" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="$(EFCoreVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Logging" Version="$(ExtensionVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Console" Version="$(ExtensionVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Debug" Version="$(ExtensionVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="$(ExtensionVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Caching.Memory" Version="$(ExtensionVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Binder" Version="7.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.FileExtensions" Version="$(ExtensionVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Xml" Version="7.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.CommandLine" Version="7.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.UserSecrets" Version="$(UserSecretsVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Binder" Version="7.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Xml" Version="7.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="$(ExtensionVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="$(ExtensionVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.FileProviders.Abstractions" Version="$(FileProviderVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.FileProviders.Composite" Version="$(FileProviderVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.FileProviders.Physical" Version="$(FileProviderVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Options" Version="7.0.0" />
+    <PackageVersion Include="Microsoft.Graph" Version="$(GraphVersion)" />
+    <PackageVersion Include="Microsoft.Graph.Auth" Version="1.0.0-preview.7" />
+    <PackageVersion Include="Microsoft.Graph.Core" Version="$(GraphVersionCore)" />
+    <PackageVersion Include="Microsoft.Management.Infrastructure" Version="$(MicrosoftManagementInfrastructureVersion)" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkVersion)" />
+    <PackageVersion Include="Microsoft.Win32.Registry" Version="$(MicrosoftWin32RegistryVersion)" />
+    <PackageVersion Include="Moq" Version="$(MoqVersion)" />
+    <PackageVersion Include="MSTest.TestAdapter" Version="$(MSTestTestAdapterVersion)" />
+    <PackageVersion Include="MSTest.TestFramework" Version="$(MSTestTestFrameworkVersion)" />
+    <PackageVersion Include="Newtonsoft.Json" Version="13.0.2-beta3" />
+    <PackageVersion Include="oneSageCore.Connector.SageStart.RD" Version="0.1.0-ci.31" />
+    <PackageVersion Include="oneSageCore.SDK" Version="0.1.0-ci.31" />
+    <PackageVersion Include="osisa.About" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.About.Contracts" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.AttachedValues" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.CodeAnalysis" Version="$(osisaTestVersion)" />
+    <PackageVersion Include="osisa.Comparer" Version="0.2.0-ModelFeature.7452" />
+    <PackageVersion Include="osisa.Converter" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Converter.Contracts" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Command" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Command.Contracts" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Configuration" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.DependencyInjection" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Ensure" Version="$(osisaTestVersion)" />
+    <PackageVersion Include="osisa.Excel" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.Exceptions" Version="$(osisaTestVersion)" />
+    <PackageVersion Include="osisa.ExcelExport" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.EntityFrameworkCore" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.EntityFrameworkCore.Relational" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.EntityFrameworkCore.Repositories" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.EntityFrameworkCore.Repositories.MicrosoftAccess" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.EntityFrameworkCore.SqlServer" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.Factories" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Factories.Contracts" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.FileContent.Contracts" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.FileContent.Provider" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.FileProviders.Physical" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.FileProvider.Repositories" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.FileProviders.TestInfrastructure" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Graph" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.Graph.Mail" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.Hosting.TestInfrastructure" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.IO.Contracts" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.IO.TestInfrastructure" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Json" Version="$(osisaTestVersion)" />
+    <PackageVersion Include="osisa.Keyed" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Keyed.Contracts" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Localization.Contracts" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Logging" Version="0.2.0-ModelFeature.7452" />
+    <PackageVersion Include="osisa.Logging.TestInfrastructure" Version="0.2.0-ModelFeature.7452" />
+    <PackageVersion Include="osisa.Login.Contracts" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Mail.Contracts" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.Numbers" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.NPOI" Version="$(osisaNPOI)" />
+    <PackageVersion Include="osisa.NPOI.OpenXml4Net" Version="$(osisaNPOI)" />
+    <PackageVersion Include="osisa.NPOI.OOXML" Version="$(osisaNPOI)" />
+    <PackageVersion Include="osisa.NPOI.OpenXmlFormats" Version="$(osisaNPOI)" />
+    <PackageVersion Include="osisa.Pattern" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Pattern.Contracts" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Reflection" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Reflection.Assemblies" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Reflection.Contracts" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Reflection.DecoratorFactory" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Reflection.Extensions" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Reflection.TestInfrastructure" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Repository" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.Repository.Contracts" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.Repository.Memory" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.Repository.Synchronizer" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.Repository.TestInfrastructure" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.Rest" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.Rest.Repository" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.Security.Contracts" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Sets" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Sets.Contracts" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Sets.KeyedCollections.Contracts" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Sets.Trees" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Sets.Trees.Contracts" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Sets.TypeDictionaries" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Strings" Version="$(osisaTestVersion)" />
+    <PackageVersion Include="osisa.StringSequences" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Synchronizer" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.Synchronizer.Contracts" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.TestInfrastructure" Version="$(osisaTestVersion)" />
+    <PackageVersion Include="osisa.TestInfrastructure.Contracts" Version="$(osisaTestVersion)" />
+    <PackageVersion Include="osisa.TestInfrastructure.TestFiles" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Tuples" Version="$(osisaTestVersion)" />
+    <PackageVersion Include="osisa.Uri.Contracts" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.Validation" Version="$(osisaTestVersion)" />
+    <PackageVersion Include="osisa.Values" Version="$(osisaBaseVersion)" />
+    <PackageVersion Include="osisa.ValueProviders" Version="$(osisaTestVersion)" />
+    <PackageVersion Include="osisa.ValueProviders.Tests" Version="$(osisaTestVersion)" />
+    <PackageVersion Include="osisa.ValueProviders.TestInfrastructure" Version="$(osisaTestVersion)" />
+    <PackageVersion Include="osisa.ValueProviders.TestInfrastructure.Tests" Version="$(osisaTestVersion)" />
+    <PackageVersion Include="osisa.Specifications" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.Specifications.Contracts" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="osisa.Xml.Repositories" Version="$(osisaRepositoryVersion)" />
+    <PackageVersion Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.0" />
+    <PackageVersion Include="Remote.Linq" Version="7.0.0" />
+    <PackageVersion Include="Remote.Linq.Newtonsoft.Json" Version="7.0.0" />
+    <PackageVersion Include="RestSharp" Version="106.11.7" />
+    <PackageVersion Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageVersion Include="System.Configuration.ConfigurationManager" Version="$(SystemConfigurationVersion)" />
+    <PackageVersion Include="System.ComponentModel.Annotations" Version="$(SystemComponentModelAnnotationsVersion)" />
+    <PackageVersion Include="System.Data.OleDb" Version="5.0.0" />
+    <PackageVersion Include="System.Data.Odbc" Version="5.0.0" />
+    <PackageVersion Include="System.DirectoryServices" Version="$(SystemDirectoryServicesVersion)" />
+    <PackageVersion Include="System.DirectoryServices.AccountManagement" Version="$(SystemDirectoryServicesVersion)" />
+    <PackageVersion Include="System.Linq.Async" Version="4.0.0" />
+    <PackageVersion Include="System.Management" Version="$(SystemManagementVersion)" />
+    <PackageVersion Include="System.Net.Http" Version="4.3.4" />
+    <PackageVersion Include="System.Resources.Extensions" Version="7.0.0" />
+    <PackageVersion Include="System.ServiceModel.Duplex" Version="4.9.0" />
+    <PackageVersion Include="System.ServiceModel.Http" Version="4.9.0" />
+    <PackageVersion Include="System.ServiceModel.NetTcp" Version="4.9.0" />
+    <PackageVersion Include="System.ServiceModel.Security" Version="4.9.0" />
+    <PackageVersion Include="System.Security.AccessControl" Version="6.0.2-mauipre.1.22102.15" />
+    <PackageVersion Include="System.Security.Principal.Windows" Version="6.0.0-preview.5.21301.5" />
+    <PackageVersion Include="System.Security.Cryptography.ProtectedData" Version="7.0.0" />
+    <PackageVersion Include="System.Text.Encodings.Web" Version="7.0.0" />
+    <PackageVersion Include="System.Text.Json" Version="7.0.1" />
+    <PackageVersion Include="System.Reflection.Emit" Version="4.7.0" />
+    <PackageVersion Include="Spectre.Console.Cli.StrongName" Version="0.0.0-preview.0.559" />
+    <PackageVersion Include="Spectre.Console.StrongName" Version="0.0.0-preview.0.559" />
+    <PackageVersion Include="Syroot.Windows.IO.KnownFolders" Version="1.3.0" />
+    <PackageVersion Include="Statiq.Web" Version="1.0.0-beta.47" />
+    <PackageVersion Include="Statiq.Docs" Version="1.0.0-beta.3" />
+    <PackageVersion Include="UblSharp" Version="1.0.0-netstandard2-0.1" />
+
+    <!--<PackageReference Update="Microsoft.Extensions.Configuration.UserSecrets" Version="7.0.0" />
+    <PackageReference Update="Newtonsoft.Json" Version="13.0.2-beta3" />-->
+    <!--<PackageReference Update="System.Configuration.ConfigurationManager" Version="7.0.0" />-->
+
+  </ItemGroup>
+</Project>
