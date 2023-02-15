@@ -8,23 +8,13 @@
 	  <None Remove="test-documents\docs\asciidoc\aggregations-usage.asciidoc" />
 	  <None Remove="test-documents\docs\asciidoc\aggregations.asciidoc" />
 	  <None Remove="test-documents\docs\asciidoc\client-concepts.asciidoc" />
-	  <None Remove="test-documents\docs\asciidoc\client-concepts\connection-pooling\building-blocks\connection-pooling.asciidoc" />
-	  <None Remove="test-documents\docs\asciidoc\client-concepts\connection-pooling\building-blocks\date-time-providers.asciidoc" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Content Include="test-documents\docs\asciidoc\aggregations-usage.asciidoc">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </Content>
-	  <Content Include="test-documents\docs\asciidoc\aggregations.asciidoc">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="test-documents\docs\asciidoc\client-concepts.asciidoc">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="test-documents\docs\asciidoc\client-concepts\connection-pooling\building-blocks\date-time-providers.asciidoc">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\client-concepts.asciidoc" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -56,10 +46,6 @@
 
 	<ItemGroup>
 	  <Folder Include="Properties\" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Page Include="test-documents\docs\asciidoc\client-concepts\connection-pooling\building-blocks\connection-pooling.asciidoc" />
 	</ItemGroup>
 
 	

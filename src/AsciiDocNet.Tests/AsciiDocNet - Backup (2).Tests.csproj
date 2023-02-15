@@ -22,9 +22,7 @@
 	  <Content Include="test-documents\docs\asciidoc\client-concepts.asciidoc">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </Content>
-	  <Content Include="test-documents\docs\asciidoc\client-concepts\connection-pooling\building-blocks\date-time-providers.asciidoc">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\client-concepts\connection-pooling\building-blocks\date-time-providers.asciidoc" />
 	</ItemGroup>
 
 	<ItemGroup>
