@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace AsciiDocNet
 {
-	internal static class PatternMatcher
+	public static class PatternMatcher
 	{
 		public static readonly Regex Admonition =
 			new Regex(
@@ -173,9 +173,11 @@ namespace AsciiDocNet
 		public static readonly Regex Stem = new Regex($"^{Regex.Escape(Patterns.Block.Stem)}{Patterns.CharacterGroupWhitespace}*$");
 
 
-		public static readonly Regex Table = new Regex($"^{Regex.Escape(Patterns.Table.Any)}{Patterns.CharacterGroupWhitespace}*$");
+        //public static readonly Regex Table = new Regex($"^{Regex.Escape(Patterns.Table.Any)}{Patterns.CharacterGroupWhitespace}*$");
+        public static readonly Regex Table = new Regex($"^{Regex.Escape(Patterns.Table.Comma)}{Patterns.CharacterGroupWhitespace}*$");
 
-		public static readonly Regex Title = new Regex($@"^\.(?<title>[^\s.].*){Patterns.CharacterGroupWhitespace}*$");
+
+        public static readonly Regex Title = new Regex($@"^\.(?<title>[^\s.].*){Patterns.CharacterGroupWhitespace}*$");
 
 		public static readonly Regex Verse = new Regex($"^{Regex.Escape(Patterns.Block.Verse)}{Patterns.CharacterGroupWhitespace}*$");
 

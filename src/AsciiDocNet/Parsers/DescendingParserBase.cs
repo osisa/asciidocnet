@@ -54,6 +54,11 @@ namespace AsciiDocNet
                     var parser = Parsers[index];
                     if (parser.IsMatch(reader, container, attributes))
                     {
+                        if (parser is TableParser)
+                        {
+                            var xx = 5;
+                        }
+
                         parser.Parse(container, reader, predicate, ref buffer, ref attributes);
                         parsed = true;
                         break;

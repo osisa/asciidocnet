@@ -1,4 +1,6 @@
-﻿namespace AsciiDocNet
+﻿using System.Collections.Generic;
+
+namespace AsciiDocNet
 {
     /// <summary>
     /// A table element
@@ -46,5 +48,7 @@
 			visitor.VisitTable(this);
 			return visitor;
 		}
+
+        public ICollection<Row> Rows { get; } = new List<Row>();
 	}
 }

@@ -47,6 +47,26 @@ namespace AsciiDocNet
             attributes = null;
         }
 
+        private static void ParseTable(Document document, IDocumentReader reader, ref AttributeList attributes)
+        {
+            var match = PatternMatcher.Table.Match(reader.Line);
+            if (!match.Success)
+            {
+                throw new ArgumentException("not a document table");
+            }
+
+            var title = match.Groups["table"].Value;
+            var lastColonIndex = title.LastIndexOf(":", StringComparison.OrdinalIgnoreCase);
+            var documentTitle = lastColonIndex > -1
+                ? new DocumentTitle(title.Substring(0, lastColonIndex), title.Substring(lastColonIndex + 1))
+                : new DocumentTitle(title);
+
+            documentTitle.Attributes.Add(attributes);
+            document.Title = documentTitle;
+
+            attributes = null;
+        }
+
         private static void ParseAuthors(Document document, string line)
         {
             if (line.IndexOf(';') > -1)

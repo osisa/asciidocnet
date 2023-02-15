@@ -31,7 +31,8 @@ namespace AsciiDocNet
 		public static class Table
 		{
 			public const string Any = @"(\||,|\:|\!])===";
-			public const string Colon = ":===";
+            //public const string Any = @"(\||,|\:|\!])===";
+            public const string Colon = ":===";
 			public const string Comma = ",===";
 			public const string Exclamation = "!===";
 			public const string Pipe = "|===";

@@ -9,5 +9,7 @@
         public const string BasicExample = "basic-example" + Extension;
 
         public const string Example = nameof(Example) + Extension;
+
+        public const string Documentation1= nameof(Documentation1) + Extension;
     }
 }

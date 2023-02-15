@@ -31,7 +31,7 @@ namespace AsciiDocNet
 				throw new ArgumentException($"{nameof(path)} must have a length");
 			}
 
-			var stream = new FileStream(path, FileMode.Open);
+			var stream = new FileStream(path, FileMode.Open, FileAccess.Read);
 			_reader = new StreamReader(stream);
             Path = path;
 		}

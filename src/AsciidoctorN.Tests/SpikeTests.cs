@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-
 using AsciiDocNet;
 
 using AsciidoctorN.Tests.TestInfrastructure;
@@ -16,6 +15,7 @@ using static AsciidoctorN.Tests.TestInfrastructure.TestValues;
 namespace AsciidoctorN.Tests
 {
     [TestClass]
+    //[DeploymentItem("TestDocs", "")]
     public class SpikeTests : UnitTestsBase
     {
         #region Public Methods and Operators
@@ -344,6 +344,35 @@ namespace AsciidoctorN.Tests
             // Assert
             result.Should().BeNull();
         }
+        
+
+        [TestMethod]
+        [DeploymentItem(@"TestDocs\Documentation1.adoc")]
+        public void GetTable()
+        {
+            // Arrange
+            var unitUnderTest = CreateUnitUnderTest(Documentation1);
+
+            // Act
+            var result = unitUnderTest.Title;
+
+            // Assert
+            result.Title.Should().Be("x");
+            //result.Title.Should().Be("Dokumentation Staudt AG");
+        }
+
+        [TestMethod]
+        public void IsMatch()
+        {
+            // Arrange
+            var text = ",===";
+            
+            // Act
+            var result = PatternMatcher.Table.IsMatch(text);
+
+            // Assert
+            result.Should().BeTrue();
+        }
 
         [TestMethod]
         public void CreatePowerPoint()
@@ -396,7 +425,7 @@ namespace AsciidoctorN.Tests
 
             file.Exists.Should().BeTrue();
 
-            return Document.Load(file.PhysicalPath);
+            return Document.Load(file.PhysicalPath!);
         }
 
         #endregion
