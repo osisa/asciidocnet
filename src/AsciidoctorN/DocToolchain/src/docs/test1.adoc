@@ -1,0 +1,55 @@
+// must pass -a allow-uri-read to enable data-uri behavior
+= Emoji Inline Macro Extension
+:data-uri:
+:cache-uri:
+//:emoji: tortue
+
+Faster than a emoji:turtle[1x]!
+
+This is an example of how you can emoji:heart[lg] Asciidoctor and Twitter Emoji.
+
+
+xxxx
+
+[json2text,vals.json,data]
+----
+I'm heading to the {{data.foo}} for {{data.dead}}.
+
+I'm heading to the {data.foo} for {data.dead}.
+----
+uuuu
+
+[yaml2text,strings.yaml,data]
+----
+I'm heading to the {{data.foo}} for {{data.dead}}.
+----
+
+hy
+
+
+[plantuml, diagram-classes, png]   
+....
+class BlockProcessor
+class DiagramBlock
+class DitaaBlock
+class PlantUmlBlock
+
+BlockProcessor <|-- DiagramBlock
+DiagramBlock <|-- DitaaBlock
+DiagramBlock <|-- PlantUmlBlock
+....
+
+
+
+
+[question, mc]
+....
+Lorem ipsum dolor sit amet, consetetur
+sadipscing elitr, sed diam nonumy eirmod
+tempor invidunt ut labore et dolore
+magna aliquyam erat, sed diam voluptua.
+
+- [X] ipsum
+- [ ] eltir
+- [X] ut
+....

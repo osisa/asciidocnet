@@ -33,8 +33,7 @@ namespace AsciiDocNet.Tests.Specifications
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en"), "Cross References", "  In order to create links to other sections\r\n  As a writer\r\n  I want to be able " +
-                    "to use a cross reference macro", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en"), "Cross References", "  In order to create links to other sections\r\n  As a writer\r\n  I want to be able to use a cross reference macro", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -111,8 +110,7 @@ namespace AsciiDocNet.Tests.Specifications
         [Xunit.TraitAttribute("Description", "Create a cross reference using the target section title")]
         public virtual void CreateACrossReferenceUsingTheTargetSectionTitle()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create a cross reference using the target section title", new string[] {
-                        "ignore"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create a cross reference using the target section title", new string[] { "ignore"});
 #line 42
   this.ScenarioSetup(scenarioInfo);
 #line hidden
