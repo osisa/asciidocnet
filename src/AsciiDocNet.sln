@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsciiDocNet", "AsciiDocNet\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsciiDocNet.Tests", "AsciiDocNet.Tests\AsciiDocNet.Tests.csproj", "{8AFB2E20-2EBE-48D2-AA28-89F7F7948429}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{5B868227-DC86-44DA-AFDE-752EB8B7CE0C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{510ED8EF-A924-4157-BA65-8208C91F4A61}"
 EndProject
 Global

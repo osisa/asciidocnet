@@ -7,9 +7,63 @@
 	<ItemGroup>
 	  <None Remove="test-documents\docs\asciidoc\aggregations-usage.asciidoc" />
 	  <None Remove="test-documents\docs\asciidoc\aggregations.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\bucket\children\children-aggregation-mapping.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\bucket\children\children-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\bucket\date-histogram\date-histogram-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\bucket\date-range\date-range-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\bucket\filters\filters-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\bucket\filter\filter-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\bucket\geo-distance\geo-distance-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\bucket\geo-hash-grid\geo-hash-grid-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\bucket\global\global-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\bucket\histogram\histogram-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\bucket\ip-range\ip-range-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\bucket\missing\missing-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\bucket\nested\nested-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\bucket\range\range-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\bucket\reverse-nested\reverse-nested-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\bucket\sampler\sampler-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\bucket\significant-terms\significant-terms-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\bucket\terms\terms-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\metric\average\average-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\metric\cardinality\cardinality-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\metric\extended-stats\extended-stats-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\metric\geo-bounds\geo-bounds-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\metric\max\max-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\metric\min\min-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\metric\percentile-ranks\percentile-ranks-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\metric\percentiles\percentiles-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\metric\scripted-metric\scripted-metric-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\metric\stats\stats-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\metric\sum\sum-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\metric\top-hits\top-hits-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\metric\value-count\value-count-aggregation-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\aggregations\writing-aggregations.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\analysis\analyzers\analyzer-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\analysis\char-filters\char-filter-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\analysis\token-filters\token-filter-usage.asciidoc" />
+	  <None Remove="test-documents\docs\asciidoc\analysis\tokenizers\tokenizer-usage.asciidoc" />
 	  <None Remove="test-documents\docs\asciidoc\client-concepts.asciidoc" />
 	  <None Remove="test-documents\docs\asciidoc\client-concepts\connection-pooling\building-blocks\connection-pooling.asciidoc" />
 	  <None Remove="test-documents\docs\asciidoc\client-concepts\connection-pooling\building-blocks\date-time-providers.asciidoc" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\bucket\children\children-aggregation-mapping.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\bucket\children\children-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\bucket\date-histogram\date-histogram-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\bucket\date-range\date-range-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\bucket\filters\filters-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -17,6 +71,99 @@
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </Content>
 	  <Content Include="test-documents\docs\asciidoc\aggregations.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\bucket\filter\filter-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\bucket\geo-distance\geo-distance-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\bucket\geo-hash-grid\geo-hash-grid-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\bucket\global\global-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\bucket\histogram\histogram-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\bucket\ip-range\ip-range-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\bucket\missing\missing-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\bucket\nested\nested-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\bucket\range\range-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\bucket\reverse-nested\reverse-nested-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\bucket\sampler\sampler-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\bucket\significant-terms\significant-terms-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\bucket\terms\terms-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\metric\average\average-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\metric\cardinality\cardinality-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\metric\extended-stats\extended-stats-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\metric\geo-bounds\geo-bounds-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\metric\max\max-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\metric\min\min-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\metric\percentile-ranks\percentile-ranks-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\metric\percentiles\percentiles-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\metric\scripted-metric\scripted-metric-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\metric\stats\stats-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\metric\sum\sum-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\metric\top-hits\top-hits-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\metric\value-count\value-count-aggregation-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\aggregations\writing-aggregations.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\analysis\analyzers\analyzer-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\analysis\char-filters\char-filter-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\analysis\token-filters\token-filter-usage.asciidoc">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="test-documents\docs\asciidoc\analysis\tokenizers\tokenizer-usage.asciidoc">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </Content>
 	  <Content Include="test-documents\docs\asciidoc\client-concepts.asciidoc">
