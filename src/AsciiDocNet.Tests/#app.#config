@@ -25,7 +25,7 @@
       listener="TechTalk.SpecFlow.Tracing.DefaultListener,TechTalk.SpecFlow" />
     -->
 		<!-- For additional details on SpecFlow configuration options see http://go.specflow.org/doc-config --></specFlow>
-	<startup>
+	<!--<startup>
 		<supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.8"/>
-	</startup>
+	</startup>-->
 </configuration>
